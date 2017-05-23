@@ -1,0 +1,69 @@
+
+
+html,body,#page-container{
+  width: 100%;
+  height: 100%;
+  padding: 0;
+  margin: 0;
+  font-family: "Annie Use Your Telescope";
+
+}
+#banner-container{
+  width: 100%;
+  height: 100%;
+  background: url(../images/earthlab_freight.jpg) no-repeat center center;
+  background-size: cover;
+  /*border: 1px solid black;*/
+  position: relative;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: row;
+
+  box-shadow: inset 0 0 0 500px rgba(0,0,0,0.5);
+
+}
+#title-container{
+	position: absolute;
+  	width: 100%;
+  	z-index: 3;
+}
+#assign-container,#title-container{
+  /*flex-grow: 1;*/
+  text-align: center;
+  transform: translateY(-500px);
+  transition: 0.7s ease-in-out;
+
+
+  /*border: 2px solid white;*/
+}
+.login-page{
+  flex-grow: 1;
+}
+#forms input{
+  margin-top: 10px;
+  width: 20em;
+  border-radius: 10px;
+}
+#assign-1,#assign-2{
+  color: white;
+  letter-spacing: 4px;
+  font-size: 50px;
+  text-align: center;
+  opacity: 0.6;
+  transition: 0.4s ease-in-out;
+  /*border: 1px solid white;*/
+  /*padding: 10px;*/
+}
+#assign-1:hover,#assign-2:hover{
+	cursor: pointer;
+	opacity: 1;
+  /*text-decoration: none;*/
+	/*color:#4CAF50;*/
+}
+#title{
+	text-align: center;
+	color:white;
+	font-size: 70px;
+}
