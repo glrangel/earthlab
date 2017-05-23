@@ -21,7 +21,7 @@ html,body,#page-container{
   align-items: center;
   flex-direction: row;
 
-  box-shadow: inset 0 0 0 500px rgba(0,0,0,0.3);
+  box-shadow: inset 0 0 0 2000px rgba(0,0,0,0.3);
 
 }
 #title-container{
@@ -55,14 +55,7 @@ html,body,#page-container{
   margin: auto;
 }
 .form {
-/*  position: relative;
-  z-index: 1;
-  background: #FFFFFF;*/
   max-width: 260px;
-/*  margin: 0 auto 100px;
-  padding: 45px;
-  text-align: center;
-  box-shadow: 0 0 20px 0 rgba(0, 0, 0, 0.2), 0 5px 5px 0 rgba(0, 0, 0, 0.24);*/
 }
 .form input {
   border-radius: 5px;

@@ -8,7 +8,6 @@ function assignmentLoad(){
 	console.log("yay!");
 }
 function assignmentTransition(){
-
 	document.getElementById('assign-container').style.transform = "translateY(700px)";
 	document.getElementById('title-container').style.transform = "translateY(700px)";
 	
@@ -21,5 +20,7 @@ function vampireLoad(){
 		document.getElementById('title-container').style.opacity = "1";
 		document.getElementById('banner-container').style.opacity = "1";
 
-
+}
+function showGraphs(){
+	$('#myChart').show();
 }

@@ -89,3 +89,7 @@ html,body,#page-container{
   /*z-index: 100;*/
   /*position: absolute;*/
 }
+#myChart{
+  /* https://mdbootstrap.com/javascript/charts/ for help on setting size etc. */
+  display: none; /* initially hidden */
+}
