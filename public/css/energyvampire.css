@@ -1,61 +1,97 @@
-
-
-html,body,#page-container{
+html,body{
   width: 100%;
   height: 100%;
   padding: 0;
   margin: 0;
   font-family: "Annie Use Your Telescope";
-
+  color: white;
 }
-#page-container{
-    background: url(../images/assignment_bg_3.jpg) no-repeat center center;
+body{
+  background: url(../images/assignment_bg_3.jpg) no-repeat center center;
+  background-attachment: fixed;
   background-size: cover;
-  box-shadow: inset 0 0 0 500px rgba(0,0,0,0.2);
-}
-#banner-container{
   width: 100%;
   height: 100%;
-  position: relative;
-  /*padding: 100px;*/
+  padding: 0;
+}
+
+h1{margin:0;}
+
+#title-container,#results-container{
+	position: relative;
+  padding: 0;
+  margin: 0;
+  width: 100%;
+  z-index: 3;
+  text-align: center;
+  box-shadow: inset 0 0 0 5000px rgba(0,0,0,0.2);
+}
+#results-container{
+  height:100%;
+  display: none;
+}
+#title2-container{
+  height:100%;
+  width:100%;
+  text-align: center;
+  box-shadow: inset 0 0 0 5000px rgba(0,0,0,0.2);
+  display: flex;
+  align-items: center;
+  flex-flow: column;
+
+}
+#steps-container{
+  display: flex;
+  flex-flow: column;
+  justify-content: flex-start;
+  align-items: flex-start;
+  width: 90%;
+  margin-top: 5em;
+}
+
+/*#button-container{
+  width:100%;
+  height: 60%;
   display: flex;
   justify-content: center;
-  align-items: flex-end;
-  /*margin-bottom: auto;*/
-  flex-direction: row;
-  /*border:1px solid white;*/
-  bottom:0;
-  padding-bottom: 80px;
-}
-#banner-container .row-2{
-  text-align: center;
-    align-items: flex-start;
-    padding-right: 30px;
-    padding-left: 30px;
-    /*flex-grow: 1;*/
+  padding-bottom: 5em;
+}*/
 
-
-  /*padding: 10px;*/
+.col{
+  border:1px solid white;
+  height: 10em;
 }
-#submit{
-  position: absolute;
-  margin-top: 60px;
+.row{
+  /*width: 100%;*/
+  padding-bottom: 5em;
+}
+
+img{
+  width: 100%;
+  padding-bottom: 1em;
+}
+.room-title{
+  padding-bottom: 1em;
+  font-size: 3em;
+}
+label{
+  font-size: 1.5em;
+}
+.form-control{
+  background-color: rgba(0,100,0,1);
+  color: white;
+  /*box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.4), 0 6px 20px 0 rgba(0, 0, 0, 0.4);*/
+
+}
+.form-group{
+  background-color: rgba(0,100,0,0.9);
+  padding: 10px;
+  border-radius: 5px;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.4), 0 6px 20px 0 rgba(0, 0, 0, 0.4);
 }
 #title-container{
-	position: absolute;
-  	width: 100%;
-  	z-index: 3;
-}
-#title-container, #banner-container{
   opacity:0;
-    transition: 0.7s ease-in-out;
-
-
-}
-#assign-container,#title-container{
-  /*flex-grow: 1;*/
-  text-align: center;
-  /*border: 2px solid white;*/
+  transition: 0.7s ease-in-out;
 }
 #title{
   text-align: center;
@@ -64,32 +100,31 @@ html,body,#page-container{
 }
 #subtitle{
   color:white;
-  font-size: 30px;
+  font-size: 20px;
+  padding-bottom: 3em;
 }
-.col-2 label{
-  color: white;
-  text-align: center;
-  width: 100%;
-  margin: 5px 5px 0px 5px;
-
-}
-.col-2 select{
-  margin: 5px;
-}
-.col-2{
-  width: 100px;
-  margin:5px;
-}
-.row{
-  width: 100%;
-  height: 100%;
+#submit{
+  border-radius: 5px;
+  font-family: "Annie Use Your Telescope", sans-serif;
+  text-transform: uppercase;
+  outline: 0;
+  background: #4CAF50;
+  width: 15%;
+  border: 0;
+  padding: 15px;
+  color: #FFFFFF;
+  font-size: 14px;
+  -webkit-transition: all 0.3 ease;
+  transition: all 0.3 ease;
+  cursor: pointer;
+  margin-bottom: 5em;
 }
 #test{
-  color:white;
-  /*z-index: 100;*/
-  /*position: absolute;*/
+  height: 100%;
 }
 #myChart{
   /* https://mdbootstrap.com/javascript/charts/ for help on setting size etc. */
-  display: none; /* initially hidden */
+  display: visible; /* initially hidden */
+  border: 1px solid white;
+  /*margin-left: -50vw;*/
 }

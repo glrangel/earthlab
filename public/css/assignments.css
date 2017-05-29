@@ -26,15 +26,14 @@ html,body,#page-container{
 }
 #title-container{
 	position: absolute;
-  	width: 100%;
-  	z-index: 3;
+  width: 100%;
+  z-index: 3;
 }
 #assign-container,#title-container{
   /*flex-grow: 1;*/
   text-align: center;
   transform: translateY(-500px);
   transition: 0.7s ease-in-out;
-
 
   /*border: 2px solid white;*/
 }

@@ -18,155 +18,212 @@
 	<link rel="stylesheet" type="text/css" href="https://fonts.googleapis.com/css?family=Annie+Use+Your+Telescope" />
 	<link rel="stylesheet" href="css/energyvampire.css">
 	<script type="text/javascript" src="js/script.js"></script>
+	
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/mdbootstrap/4.3.0/js/mdb.min.js"></script>
+	<script src="js/graphs.js"></script>
 
 	<title>Document</title>
 
 </head>
 <body onload="vampireLoad()">
-	<div id="page-container">
-		<div id="title-container">
-			<h1 id="title">Energy Vampire</h1>
-			<h2 id="subtitle">Save energy by unplugging your unused household applicances and electronics!</h1>
-			<h2 id="subtitle">You can help preserve EarthLabs' natural beauty!</h1>
+	<div id="title2-container">
+		<h1 id="title">Energy Vampire</h1>
+		<h2 id="subtitle">Save energy by unplugging your unused household applicances and electronics! You can help preserve EarthLabs' natural beauty!</h2>
+		<div id="steps-container">
+			<h1>Step1 1: When you're home count the number of electronics that you have.</h1>
+			<h1>Step1 2: Input your number below.</h1>
+			<h1>Step1 3: See how you could save the enviornment by simply unpluggin unuesd aplliances!</h1>
 		</div>
-		<div id="banner-container">
-			<div class="row-2">
-			  <div class="col-2">
-			  	<label>TV (45")</label>
-			  	<select class="form-control">
-			  	  <option>0</option>
-			  	  <option>1</option>
-			  	  <option>2</option>
-			  	  <option>3</option>
-			  	  <option>4</option>
-			  	  <option>5</option>
-			  	</select>
+	</div>
+	<div id="title-container">
+		<div class="container">
+			<!-- Living Room -->
+			<div class="row">
+			  <h1 class="room-title">Living Room</h1>
+			  <div class="col-xs-3">
+			    <div class="form-group">
+				    <label>TV (45")</label><br>
+				    <img width=200 src="images/assignment_bg.jpg">
+				    <select class="selectpicker form-control" >
+						<option>0</option>
+						<option>1</option>
+						<option>2</option>
+						<option>3</option>
+						<option>4</option>
+						<option>5</option>
+			      	</select>
+			    </div>
+			  </div>			  
+			  <div class="col-xs-3">
+			    <div class="form-group">
+			      	<label>Tablet</label><br>
+				    <img width=200 src="images/assignment_bg.jpg">
+				    <select class="selectpicker form-control" >
+						<option>0</option>
+						<option>1</option>
+						<option>2</option>
+						<option>3</option>
+						<option>4</option>
+						<option>5</option>
+			      	</select>
+			    </div>
+			  </div>			  
+			  <div class="col-xs-3">
+			    <div class="form-group">
+			      	<label>Video Game Console</label><br>
+				    <img width=200 src="images/assignment_bg.jpg">
+				    <select class="selectpicker form-control" >
+						<option>0</option>
+						<option>1</option>
+						<option>2</option>
+						<option>3</option>
+						<option>4</option>
+						<option>5</option>
+			      	</select>
+			    </div>
 			  </div>
-			  <div class="col-2">
-			  	<label>Tablet</label>
-			  	<select class="form-control">
-			  	  <option>0</option>
-			  	  <option>1</option>
-			  	  <option>2</option>
-			  	  <option>3</option>
-			  	  <option>4</option>
-			  	  <option>5</option>
-			  	</select>
-			  </div>
-			  <div class="col-2">
-			  	<label>Video Game Console</label>
-			  	<select class="form-control">
-			  	  <option>0</option>
-			  	  <option>1</option>
-			  	  <option>2</option>
-			  	  <option>3</option>
-			  	  <option>4</option>
-			  	  <option>5</option>
-			  	</select>
-			  </div>
-			  <div class="col-2">
-			  	<label>Lamp (60 Watt Bulb)</label>
-			  	<select class="form-control">
-			  	  <option>0</option>
-			  	  <option>1</option>
-			  	  <option>2</option>
-			  	  <option>3</option>
-			  	  <option>4</option>
-			  	  <option>5</option>
-			  	</select>
+			  <div class="col-xs-3">
+			    <div class="form-group">
+			      	<label>Lamp (60 Watt Bulb)</label><br>
+				    <img width=200 src="images/assignment_bg.jpg">
+				    <select class="selectpicker form-control" >
+						<option>0</option>
+						<option>1</option>
+						<option>2</option>
+						<option>3</option>
+						<option>4</option>
+						<option>5</option>
+			      	</select>
+			    </div>
 			  </div>
 			</div>
 
-			  <div class="row-2">
-			  <div class="col-2">
-			  	<label>Laptop</label>
-			  	<select class="form-control">
-			  	  <option>0</option>
-			  	  <option>1</option>
-			  	  <option>2</option>
-			  	  <option>3</option>
-			  	  <option>4</option>
-			  	  <option>5</option>
-			  	</select>
+			<!-- Kitchen -->
+
+			<div class="row">
+			  <h1 class="room-title">Kitchen</h1>
+			  <div class="col-xs-4">
+			    <div class="form-group">
+				    <label>Toaster</label><br>
+				    <img width=200 src="images/assignment_bg.jpg">
+				    <select class="selectpicker form-control" >
+						<option>0</option>
+						<option>1</option>
+						<option>2</option>
+						<option>3</option>
+						<option>4</option>
+						<option>5</option>
+			      	</select>
+			    </div>
 			  </div>			  
-			  <div class="col-2">
-			  	<label>Cell Phone Charger</label>
-			  	<select class="form-control">
-			  	  <option>0</option>
-			  	  <option>1</option>
-			  	  <option>2</option>
-			  	  <option>3</option>
-			  	  <option>4</option>
-			  	  <option>5</option>
-			  	</select>
+			  <div class="col-xs-4">
+			    <div class="form-group">
+			      	<label>Microwave Oven</label><br>
+				    <img width=200 src="images/assignment_bg.jpg">
+				    <select class="selectpicker form-control" >
+						<option>0</option>
+						<option>1</option>
+						<option>2</option>
+						<option>3</option>
+						<option>4</option>
+						<option>5</option>
+			      	</select>
+			    </div>
+			  </div>			  
+			  <div class="col-xs-4">
+			    <div class="form-group">
+			      	<label>Coffee Maker</label><br>
+				    <img width=200 src="images/assignment_bg.jpg">
+				    <select class="selectpicker form-control" >
+						<option>0</option>
+						<option>1</option>
+						<option>2</option>
+						<option>3</option>
+						<option>4</option>
+						<option>5</option>
+			      	</select>
+			    </div>
 			  </div>
-			  <div class="col-2">
-			  	<label>Computer (Desktop)</label>
-			  	<select class="form-control">
-			  	  <option>0</option>
-			  	  <option>1</option>
-			  	  <option>2</option>
-			  	  <option>3</option>
-			  	  <option>4</option>
-			  	  <option>5</option>
-			  	</select>
-			  </div>
-			  <div class="col-2">
-			  	<label>Printer</label>
-			  	<select class="form-control">
-			  	  <option>0</option>
-			  	  <option>1</option>
-			  	  <option>2</option>
-			  	  <option>3</option>
-			  	  <option>4</option>
-			  	  <option>5</option>
-			  	</select>
-			  </div>
+
 			</div>
 
-			<div class="row-2">
-			  <div class="col-2">
-			  	<label>Toaster</label>
-			  	<select class="form-control">
-			  	  <option>0</option>
-			  	  <option>1</option>
-			  	  <option>2</option>
-			  	  <option>3</option>
-			  	  <option>4</option>
-			  	  <option>5</option>
-			  	</select>
+			<!-- Office -->
+			<div class="row">
+			  <h1 class="room-title">Office</h1>
+			  <div class="col-xs-3">
+			    <div class="form-group">
+				    <label>Laptop</label><br>
+				    <img width=200 src="images/assignment_bg.jpg">
+				    <select class="selectpicker form-control" >
+						<option>0</option>
+						<option>1</option>
+						<option>2</option>
+						<option>3</option>
+						<option>4</option>
+						<option>5</option>
+			      	</select>
+			    </div>
 			  </div>			  
-			  <div class="col-2">
-			  	<label>Microwave Oven</label>
-			  	<select class="form-control">
-			  	  <option>0</option>
-			  	  <option>1</option>
-			  	  <option>2</option>
-			  	  <option>3</option>
-			  	  <option>4</option>
-			  	  <option>5</option>
-			  	</select>
+			  <div class="col-xs-3">
+			    <div class="form-group">
+			      	<label>Cellphone Charger</label><br>
+				    <img width=200 src="images/assignment_bg.jpg">
+				    <select class="selectpicker form-control" >
+						<option>0</option>
+						<option>1</option>
+						<option>2</option>
+						<option>3</option>
+						<option>4</option>
+						<option>5</option>
+			      	</select>
+			    </div>
+			  </div>			  
+			  <div class="col-xs-3">
+			    <div class="form-group">
+			      	<label>Computer (Desktop)</label><br>
+				    <img width=200 src="images/assignment_bg.jpg">
+				    <select class="selectpicker form-control" >
+						<option>0</option>
+						<option>1</option>
+						<option>2</option>
+						<option>3</option>
+						<option>4</option>
+						<option>5</option>
+			      	</select>
+			    </div>
 			  </div>
-			  <div class="col-2">
-			  	<label>Coffee Maker</label>
-			  	<select class="form-control">
-			  	  <option>0</option>
-			  	  <option>1</option>
-			  	  <option>2</option>
-			  	  <option>3</option>
-			  	  <option>4</option>
-			  	  <option>5</option>
-			  	</select>
+			  <div class="col-xs-3">
+			    <div class="form-group">
+			      	<label>Printer</label><br>
+				    <img width=200 src="images/assignment_bg.jpg">
+				    <select class="selectpicker form-control" >
+						<option>0</option>
+						<option>1</option>
+						<option>2</option>
+						<option>3</option>
+						<option>4</option>
+						<option>5</option>
+			      	</select>
+			    </div>
 			  </div>
 			</div>
-				<canvas id="myChart"></canvas>
+		</div>
+		<button id="submit" onclick="resultsPage()"> Submit </button>
+	</div>
+	<div id="results-container">
+		<h1 id="title">Results</h1>
+		<canvas height=50 width=400 id="myChart"></canvas>
+	</div>
+		
+<!-- 			</div>
 			<div id="submit">
 				<button onclick="showGraphs()">Submit</button>
 				<script src="https://cdnjs.cloudflare.com/ajax/libs/mdbootstrap/4.3.0/js/mdb.min.js"></script>
 				<script src="js/graphs.js"></script>
-			</div>
-			</div>
-	</div>
+			</div> -->
+			<!-- </div> -->
+
+
 
 </body>
 </html>
