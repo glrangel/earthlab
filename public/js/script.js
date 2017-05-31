@@ -159,35 +159,35 @@ function calculateItems(){
 	$('#results-container p:nth-child(12)').text("Printer: " + value_array[10]);
 
 	//-----------display yearly energy saved------------//
-	$('#results-container p:nth-child(2)').text("Energy saved for TV: " + energysavings_array[0]);
+	$('#results-container p:nth-child(13)').text("Energy saved for TV: " + energysavings_array[0]);
 	//$('#results-container p:nth-child(3)').text("Energy saved for Tablet: " + value_array[1]);
-	$('#results-container p:nth-child(4)').text("Energy saved for Video Game Console: " + energysavings_array[2]);
-	$('#results-container p:nth-child(5)').text("Energy saved for Lamp: " + energysavings_array[3]);
+	$('#results-container p:nth-child(14)').text("Energy saved for Video Game Console: " + energysavings_array[2]);
+	$('#results-container p:nth-child(15)').text("Energy saved for Lamp: " + energysavings_array[3]);
 
-	$('#results-container p:nth-child(6)').text("Energy saved for Toaster: " + energysavings_array[4]);
-	$('#results-container p:nth-child(7)').text("Energy saved for Microwave Oven: " + energysavings_array[5]);
-	$('#results-container p:nth-child(8)').text("Energy saved for Coffee Maker: " + energysavings_array[6]);
+	$('#results-container p:nth-child(16)').text("Energy saved for Toaster: " + energysavings_array[4]);
+	$('#results-container p:nth-child(17)').text("Energy saved for Microwave Oven: " + energysavings_array[5]);
+	$('#results-container p:nth-child(18)').text("Energy saved for Coffee Maker: " + energysavings_array[6]);
 
-	$('#results-container p:nth-child(9)').text("Energy saved for Laptop: " + energysavings_array[7]);
-	$('#results-container p:nth-child(10)').text("Energy saved for Cellphone Charger: " + energysavings_array[8]);
-	$('#results-container p:nth-child(11)').text("Energy saved for Computer (Desktop): " + energysavings_array[9]);
-	$('#results-container p:nth-child(12)').text("Energy saved for Printer: " + energysavings_array[10]);
+	$('#results-container p:nth-child(19)').text("Energy saved for Laptop: " + energysavings_array[7]);
+	$('#results-container p:nth-child(20)').text("Energy saved for Cellphone Charger: " + energysavings_array[8]);
+	$('#results-container p:nth-child(21)').text("Energy saved for Computer (Desktop): " + energysavings_array[9]);
+	$('#results-container p:nth-child(22)').text("Energy saved for Printer: " + energysavings_array[10]);
 
 	//---------display yearly money saved-------------//
 	//-----------display energy saved------------//
-	$('#results-container p:nth-child(2)').text("Money saved for TV: " + moneysavings_array[0]);
+	$('#results-container p:nth-child(23)').text("Money saved for TV: " + moneysavings_array[0]);
 	//$('#results-container p:nth-child(3)').text("Energy saved for Tablet: " + value_array[1]);
-	$('#results-container p:nth-child(4)').text("Money saved for Video Game Console: " + moneysavings_array[2]);
-	$('#results-container p:nth-child(5)').text("Money saved for Lamp: " + moneysavings_array[3]);
+	$('#results-container p:nth-child(24)').text("Money saved for Video Game Console: " + moneysavings_array[2]);
+	$('#results-container p:nth-child(25)').text("Money saved for Lamp: " + moneysavings_array[3]);
 
-	$('#results-container p:nth-child(6)').text("Money saved for Toaster: " + moneysavings_array[4]);
-	$('#results-container p:nth-child(7)').text("Money saved for Microwave Oven: " + moneysavings_array[5]);
-	$('#results-container p:nth-child(8)').text("Money saved for Coffee Maker: " + moneysavings_array[6]);
+	$('#results-container p:nth-child(26)').text("Money saved for Toaster: " + moneysavings_array[4]);
+	$('#results-container p:nth-child(27)').text("Money saved for Microwave Oven: " + moneysavings_array[5]);
+	$('#results-container p:nth-child(28)').text("Money saved for Coffee Maker: " + moneysavings_array[6]);
 
-	$('#results-container p:nth-child(9)').text("Money saved for Laptop: " + moneysavings_array[7]);
-	$('#results-container p:nth-child(10)').text("Money saved for Cellphone Charger: " + moneysavings_array[8]);
-	$('#results-container p:nth-child(11)').text("Money saved for Computer (Desktop): " + moneysavings_array[9]);
-	$('#results-container p:nth-child(12)').text("Money saved for Printer: " + moneysavings_array[10]);
+	$('#results-container p:nth-child(29)').text("Money saved for Laptop: " + moneysavings_array[7]);
+	$('#results-container p:nth-child(30)').text("Money saved for Cellphone Charger: " + moneysavings_array[8]);
+	$('#results-container p:nth-child(31)').text("Money saved for Computer (Desktop): " + moneysavings_array[9]);
+	$('#results-container p:nth-child(32)').text("Money saved for Printer: " + moneysavings_array[10]);
 
 }
 
