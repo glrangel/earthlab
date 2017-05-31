@@ -144,22 +144,31 @@ function calculateItems(){
 	energysavings_array[9] = value_array[9] * COMPUTER_SAVEDMON;   //Computer (Desktop)
 	energysavings_array[10] = value_array[10] * PRINTER_SAVEDMON;   //Printer
 
-	$('#results-container p:nth-child(2)').text("TV: " + value_array[0]);
-	$('#results-container p:nth-child(3)').text("Tablet: " + value_array[1]);
-	$('#results-container p:nth-child(4)').text("Video Game Console: " + value_array[2]);
-	$('#results-container p:nth-child(5)').text("Lamp: " + value_array[3]);
-
-	$('#results-container p:nth-child(6)').text("Toaster: " + value_array[4]);
-	$('#results-container p:nth-child(7)').text("Microwave Oven: " + value_array[5]);
-	$('#results-container p:nth-child(8)').text("Coffee Maker: " + value_array[6]);
-
-	$('#results-container p:nth-child(9)').text("Laptop: " + value_array[7]);
-	$('#results-container p:nth-child(10)').text("Cellphone Charger: " + value_array[8]);
-	$('#results-container p:nth-child(11)').text("Computer (Desktop): " + value_array[9]);
-	$('#results-container p:nth-child(12)').text("Printer: " + value_array[10]);
+	$('#results-container p:nth-child(2)').text("TV: " + value_array[0] + "Money saved:" + moneysavings_array[0]
+		+"Energy saved:" + energysavings_array[0]);
+	$('#results-container p:nth-child(3)').text("Tablet: " + value_array[1] + "Money saved:" + moneysavings_array[1]
+		+ "Energy saved:" + energysavings_array[1]);
+	$('#results-container p:nth-child(4)').text("Video Game Console: " + value_array[2] + "Money saved:" + moneysavings_array[2]
+		+ "Energy saved:" + energysavings_array[2]);
+	$('#results-container p:nth-child(5)').text("Lamp: " + value_array[3] + "Money saved:" + moneysavings_array[3] 
+		+ "Energy saved:" + energysavings_array[3]);
+	$('#results-container p:nth-child(6)').text("Toaster: " + value_array[4] + "Money saved:" + moneysavings_array[4] 
+		+ "Energy saved:" + energysavings_array[4]);
+	$('#results-container p:nth-child(7)').text("Microwave Oven: " + value_array[5] + "Money saved:" + moneysavings_array[5]
+		+ "Energy saved:" + energysavings_array[5]);
+	$('#results-container p:nth-child(8)').text("Coffee Maker: " + value_array[6] + "Money saved:" + moneysavings_array[6]
+		+ "Energy saved:" + energysavings_array[6]);
+	$('#results-container p:nth-child(9)').text("Laptop: " + value_array[7] + "Money saved:" + moneysavings_array[7] 
+		+ "Energy saved:" + energysavings_array[7]);
+	$('#results-container p:nth-child(10)').text("Cellphone Charger: " + value_array[8] + "Money saved:" + moneysavings_array[8]
+		+ "Energy saved:" + energysavings_array[8]);
+	$('#results-container p:nth-child(11)').text("Computer (Desktop): " + value_array[9] + "Money saved:" + moneysavings_array[9] 
+		+ "Energy saved:" + energysavings_array[9]);
+	$('#results-container p:nth-child(12)').text("Printer: " + value_array[10] + "Money saved:" + moneysavings_array[10] 
+		+ "Energy saved:" + energysavings_array[10]);
 
 	//-----------display yearly energy saved------------//
-	$('#results-container p:nth-child(13)').text("Energy saved for TV: " + energysavings_array[0]);
+	/*$('#results-container p:nth-child(13)').text("Energy saved for TV: " + energysavings_array[0]);
 	//$('#results-container p:nth-child(3)').text("Energy saved for Tablet: " + value_array[1]);
 	$('#results-container p:nth-child(14)').text("Energy saved for Video Game Console: " + energysavings_array[2]);
 	$('#results-container p:nth-child(15)').text("Energy saved for Lamp: " + energysavings_array[3]);
@@ -187,7 +196,7 @@ function calculateItems(){
 	$('#results-container p:nth-child(29)').text("Money saved for Laptop: " + moneysavings_array[7]);
 	$('#results-container p:nth-child(30)').text("Money saved for Cellphone Charger: " + moneysavings_array[8]);
 	$('#results-container p:nth-child(31)').text("Money saved for Computer (Desktop): " + moneysavings_array[9]);
-	$('#results-container p:nth-child(32)').text("Money saved for Printer: " + moneysavings_array[10]);
+	$('#results-container p:nth-child(32)').text("Money saved for Printer: " + moneysavings_array[10]);*/
 
 }
 
