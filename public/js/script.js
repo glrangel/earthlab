@@ -1,20 +1,37 @@
 
 var value_array = [];
-var energy_array = [];
+var energysavings_array = [];
+var moneysavings_array = [];
 
-var TV_CONST = 1; //values to multiply by
-var TABLET_CONST = 1;
-var CONSOLE_CONST = 1;
-var LAMP_CONST = 1;
+//-------COST SAVINGS------//
+var TV_SAVEDMON = 10.26; //values to multiply by
+//var TABLET_SAVEDMON = 1;
+var CONSOLE_SAVEDMON = 1.73;
+var LAMP_SAVEDMON = 0.20;
 
-var TOASTER_CONST = 1;
-var MICROWAVE_CONST = 1;
-var COFFEE_CONST = 1;
+var TOASTER_SAVEDMON = 1.80;
+var MICROWAVE_SAVEDMON = 8.54;
+var COFFEE_SAVEDMON = 1.71;
 
-var LAPTOP_CONST = 1;
-var CELLPHONE_CONST = 1;
-var COMPUTER_CONST = 1;
-var PRINTER_CONST = 1;
+var LAPTOP_SAVEDMON = 15.24;
+var CELLPHONE_SAVEDMON = 0.44;
+var COMPUTER_SAVEDMON = 4.86;
+var PRINTER_SAVEDMON = 3.25;
+
+//-----ENERGY SAVINGS-------//
+var TV_SAVEDENER = 51.18; 
+//var TABLET_SAVEDMON = 1;
+var CONSOLE_SAVEDENER = 8.63;
+var LAMP_SAVEDENER = 1;
+
+var TOASTER_SAVEDENER = 9;
+var MICROWAVE_SAVEDENER = 8.54;
+var COFFEE_SAVEDENER = 9.74;
+
+var LAPTOP_SAVEDENER = 76.04;
+var CELLPHONE_SAVEDENER = 2.22;
+var COMPUTER_SAVEDENER = 24.26;
+var PRINTER_SAVEDENER = 16.23;
 
 
 // Animation functions
@@ -99,19 +116,33 @@ function calculateItems(){
 
 	//ex. energy array[0] = the number of TV's * caluclated stuff from spreadsheet LIESE CAN YOU DO STUFF HERE?? -------------
 	
-	energy_array[0] = value_array[0] * TV_CONST;		 //TV
-	energy_array[1] = value_array[1] * TABLET_CONST;  //Tablet
-	energy_array[2] = value_array[2] * CONSOLE_CONST; //Video Game Console
-	energy_array[3] = value_array[3] * LAMP_CONST; 	 //Lamp
+	moneysavings_array[0] = value_array[0] * TV_SAVEDMON;		 //TV
+	moneysavings_array[1] = value_array[1] * TABLET_SAVEDMON;  //Tablet
+	moneysavings_array[2] = value_array[2] * CONSOLE_SAVEDMON; //Video Game Console
+	moneysavings_array[3] = value_array[3] * LAMP_SAVEDMON; 	 //Lamp
 
-	energy_array[4] = value_array[4] * TOASTER_CONST;   //Toaster
-	energy_array[5] = value_array[5] * MICROWAVE_CONST; //Microwave
-	energy_array[6] = value_array[6] * COFFEE_CONST;    //Coffee Maker
+	moneysavings_array[4] = value_array[4] * TOASTER_SAVEDMON;   //Toaster
+	moneysavings_array[5] = value_array[5] * MICROWAVE_SAVEDMON; //Microwave
+	moneysavings_array[6] = value_array[6] * COFFEE_SAVEDMON;    //Coffee Maker
 
-	energy_array[7] = value_array[7] * LAPTOP_CONST; 	//Laptop
-	energy_array[8] = value_array[8] * CELLPHONE_CONST;  //Cellphone Charger
-	energy_array[9] = value_array[9] * COMPUTER_CONST;   //Computer (Desktop)
-	energy_array[10] = value_array[10] * PRINTER_CONST;   //Printer
+	moneysavings_array[7] = value_array[7] * LAPTOP_SAVEDMON; 	//Laptop
+	moneysavings_array[8] = value_array[8] * CELLPHONE_SAVEDMON;  //Cellphone Charger
+	moneysavings_array[9] = value_array[9] * COMPUTER_SAVEDMON;   //Computer (Desktop)
+	moneysavings_array[10] = value_array[10] * PRINTER_SAVEDMON;   //Printer
+
+	energysavings_array[0] = value_array[0] * TV_SAVEDMON;		 //TV
+	energysavings_array[1] = value_array[1] * TABLET_SAVEDMON;  //Tablet
+	energysavings_array[2] = value_array[2] * CONSOLE_SAVEDMON; //Video Game Console
+	energysavings_array[3] = value_array[3] * LAMP_SAVEDMON; 	 //Lamp
+
+	energysavings_array[4] = value_array[4] * TOASTER_SAVEDMON;   //Toaster
+	energysavings_array[5] = value_array[5] * MICROWAVE_SAVEDMON; //Microwave
+	energysavings_array[6] = value_array[6] * COFFEE_SAVEDMON;    //Coffee Maker
+
+	energysavings_array[7] = value_array[7] * LAPTOP_SAVEDMON; 	//Laptop
+	energysavings_array[8] = value_array[8] * CELLPHONE_SAVEDMON;  //Cellphone Charger
+	energysavings_array[9] = value_array[9] * COMPUTER_SAVEDMON;   //Computer (Desktop)
+	energysavings_array[10] = value_array[10] * PRINTER_SAVEDMON;   //Printer
 
 	$('#results-container p:nth-child(2)').text("TV: " + value_array[0]);
 	$('#results-container p:nth-child(3)').text("Tablet: " + value_array[1]);
