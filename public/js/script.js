@@ -130,13 +130,12 @@ function resultsPage(){
 //Calculating functions
 function moneyAndEnergySaved(){
 	for(var i = 0; i<value_array.length; i++){
-		if(i == 1) //skip tablet because values are not that accurate
-			continue;
-		else{
+		// if(i == 1) //skip tablet because values are not that accurate
+		// 	continue;
+		// else{
 			moneysavings_array[i] = value_array[i] * money_const_array[i];
 			energysavings_array[i] = value_array[i] * energy_const_array[i];
-		}
-
+		// }
 	}
 }
 function populateGraphs(){
@@ -145,9 +144,12 @@ function populateGraphs(){
 		$('#results-container p:nth-child(' + (i+2) + ')')
 			.text(item_array[i] + ": " + value_array[i] + " Money saved: " + moneysavings_array[i]+ " Energy saved: " + energysavings_array[i]);
 	}
-
+	populateMoneyGraph(); //function is in graphs.js
+	populateEnergyGraph(); //function is in graphs.js
+	$('#myChart').css('display','block');
 
 }
+
 function calculateItems(){
 	moneyAndEnergySaved();	
 	populateGraphs();
