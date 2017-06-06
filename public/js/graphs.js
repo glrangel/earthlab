@@ -1,30 +1,30 @@
-var option = {
+var options = {
 responsive: true,
 };
-var data = [
-{
-    value: 300,
-    color:"#F7464A",
-    highlight: "#FF5A5E",
-    label: "TV"
-},
-{
-    value: 50,
-    color: "#46BFBD",
-    highlight: "#5AD3D1",
-    label: "Green"
-},
-{
-    value: 100,
-    color: "#FDB45C",
-    highlight: "#FFC870",
-    label: "Yellow"
-}
-]
+data = {
+    datasets: [{
+        data: [10, 20, 30]
+    }],
+
+    // These labels appear in the legend and in the tooltips when hovering different arcs
+    labels: [
+        'Red',
+        'Yellow',
+        'Blue'
+    ],
+    backgroundColor: [
+        'rgba(255, 99, 132, 0.2)',
+        'rgba(54, 162, 235, 0.2)',
+        'rgba(255, 206, 86, 0.2)'
+    ]
+};
 // Get the context of the canvas element we want to select
 var ctx = document.getElementById("myChart").getContext('2d');
-var myDoughnutChart = new Chart(ctx).Doughnut(data,option);
-
+var myDoughnutChart = new Chart(ctx, {
+    type: 'doughnut',
+    data: data,
+    options: options
+});
 
 // value_array[0] = TV
 // value_array[1] = Tablet

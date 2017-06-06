@@ -14,13 +14,14 @@
 	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
 
 
-	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/mdbootstrap/4.3.0/css/mdb.min.css"> 
 	<link rel="stylesheet" type="text/css" href="https://fonts.googleapis.com/css?family=Annie+Use+Your+Telescope" />
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.6.0/Chart.js"></script>
+
 	<link rel="stylesheet" href="css/energyvampire.css">
 	<script type="text/javascript" src="js/script.js"></script>
+
 	
-<!-- 	<script src="https://cdnjs.cloudflare.com/ajax/libs/mdbootstrap/4.3.0/js/mdb.min.js"></script>
-	<script src="js/graphs.js"></script> -->
+
 
 	<title>Document</title>
 
@@ -209,6 +210,7 @@
 			</div>
 		</div>
 		<button id="submit" onclick="resultsPage()"> Submit </button>
+
 	</div>
 	<div id="results-container">
 		<h1 id="title">Results</h1>
@@ -227,17 +229,10 @@
 		<p></p>
 		<p></p>
 
-		<canvas height=50 width=400 id="myChart"></canvas>
 	</div>
+	<canvas height=200 width=400 id="myChart"></canvas>
+	<script src="js/graphs.js"></script>
 		
-<!-- 			</div>
-			<div id="submit">
-				<button onclick="showGraphs()">Submit</button>
-				<script src="https://cdnjs.cloudflare.com/ajax/libs/mdbootstrap/4.3.0/js/mdb.min.js"></script>
-				<script src="js/graphs.js"></script>
-			</div> -->
-			<!-- </div> -->
-
 
 
 </body>

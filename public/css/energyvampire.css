@@ -125,7 +125,6 @@ label{
 }
 #myChart{
   /* https://mdbootstrap.com/javascript/charts/ for help on setting size etc. */
-  display: visible; /* initially hidden */
   border: 1px solid white;
   /*margin-left: -50vw;*/
 }

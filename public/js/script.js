@@ -1,4 +1,5 @@
 // Values below were calculated from SDGE database
+var NUM_OF_ITEMS = 11;
 //-------COST SAVINGS------//
 var TV_SAVEDMON = 10.26; //values to multiply by
 var TABLET_SAVEDMON = 1;
@@ -100,23 +101,21 @@ $(document).ready(function () {
 });
 
 function initializeArray(){
-	console.log("printing...2");
-	for(i = 0;i<11;i++){
+	console.log("Initializing array...");
+	for(i = 0;i<NUM_OF_ITEMS;i++){
 		value_array[i] = 0;
 	}
-	for(i = 0;i<11;i++){
-		console.log("should be zeros" + value_array[i] );
-	}
+	console.log("Array successfully initialized!");
+
 }
 
 //scroll to results page
 function resultsPage(){
-	console.log("clicked");
 	$('#results-container').css('display', 'inherit');
 	$('body').animate({
         scrollTop: $("#results-container").offset().top
     }, 1000);
-    printItems();
+    // printItems();
     calculateItems();
 }
 
@@ -130,7 +129,6 @@ function resultsPage(){
 
 //Calculating functions
 function moneyAndEnergySaved(){
-	console.log("value rry: " + value_array.length);
 	for(var i = 0; i<value_array.length; i++){
 		if(i == 1) //skip tablet because values are not that accurate
 			continue;
@@ -142,15 +140,16 @@ function moneyAndEnergySaved(){
 	}
 }
 function populateGraphs(){
+	//print all items
 	for(var i = 0; i<value_array.length; i++){
 		$('#results-container p:nth-child(' + (i+2) + ')')
 			.text(item_array[i] + ": " + value_array[i] + " Money saved: " + moneysavings_array[i]+ " Energy saved: " + energysavings_array[i]);
 	}
+
+
 }
 function calculateItems(){
-
 	moneyAndEnergySaved();	
 	populateGraphs();
-
 }
 
