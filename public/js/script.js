@@ -153,8 +153,7 @@ function calcTotalMoneyAndEnergySaved(){
 		totalMoney += (moneysavings_array[i].value);
 		totalEnergy += (energysavings_array[i].value);
 	}
-	numOfTrees = 3;//totalEnergy / 1;
-
+	numOfTrees = Math.round(totalEnergy * 0.018);//totalEnergy / 1;
 	//assign html elements, bolded and changed color to standout
 	$('#money-saved').html("Money Saved Per Year: <br><b style='color:rgba(50,250,100,1);'>$" + totalMoney.toFixed(2) +"</b>");
 	$('#energy-saved').html("Energy Saved Per Year: <br><b style='color:rgba(50,250,100,1);'>" + totalEnergy.toFixed(2) + " kWh</b>");
