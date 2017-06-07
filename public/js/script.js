@@ -148,19 +148,25 @@ function moneyAndEnergySaved(){
 	calcTotalMoneyAndEnergySaved();
 }
 function calcTotalMoneyAndEnergySaved(){
-	var totalMoney = 0,totalEnergy = 0;
+	var totalMoney = 0,totalEnergy = 0,numOfTrees = 0;
 	for(var i = 0; i< NUM_OF_ITEMS;i++){
-		console.log(moneysavings_array[i].value);
-		console.log(energysavings_array[i].value);
 		totalMoney += (moneysavings_array[i].value);
 		totalEnergy += (energysavings_array[i].value);
 	}
+	numOfTrees = 3;//totalEnergy / 1;
+
 	//assign html elements, bolded and changed color to standout
 	$('#money-saved').html("Money Saved Per Year: <br><b style='color:rgba(50,250,100,1);'>$" + totalMoney.toFixed(2) +"</b>");
-	$('#energy-saved').html("Energy Saved Per Year: <br><b style='color:rgba(50,250,100,1);'>" + totalEnergy.toFixed(2) + " KWh</b>");
+	$('#energy-saved').html("Energy Saved Per Year: <br><b style='color:rgba(50,250,100,1);'>" + totalEnergy.toFixed(2) + " kWh</b>");
+	//display number of trees saved based on totalEnergy value
+	$('#tree-paragraph').html("kWh means kilowatt hours.  It's basically the amount of energy you use per hour. " + 
+		"If you unplug your appliances when you're not using them you could save: <br><b style='color:rgba(50,250,100,1);'>" + totalEnergy.toFixed(2) + " kWh</b> <br>which is about the" + 
+		" same energy required to grow <br><b style='color:rgba(50,250,100,1);'>" + numOfTrees + " trees</b>!");
 
-	console.log(parseFloat(totalMoney));
-	console.log(parseFloat(totalEnergy));
+	//show correct number of trees saved
+	for(var i = 0; i < numOfTrees  ; i++){
+		$('#tree-paragraph').after('<img class="tree-images" src="images/happy_tree.png">');
+	}
 }
 
 function displayValues(){
@@ -190,11 +196,12 @@ function compare(a,b) {
 
 function refresh(){
 	//destroys old charts to ensure the glitching overlay bug does not occur
-	myDoughnutChart1.destroy(); 
 	myDoughnutChart2.destroy();
+	myDoughnutChart1.destroy(); 
 	$('body').animate({
         scrollTop: $("#title-container").offset().top
     }, 1000);
+    $('.selectpicker').each(function(){this.selectedIndex = 0;})
     $('#results-container').css('display', 'none'); //hide container
 	$('#submit').css('display','inline'); //hide button
 	//show submit butotn

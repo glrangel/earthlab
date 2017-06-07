@@ -48,17 +48,17 @@ function populateMoneyGraph(){
           backgroundColor: ["#3366CC","#DC3912","#FF9900","#109618","#990099","#3B3EAC","#0099C6",
             "#DD4477","#66AA00","#B82E2E","#316395"],
           data: [
-            moneysavings_array[0].value,
-            moneysavings_array[1].value,
-            moneysavings_array[2].value,
-            moneysavings_array[3].value,
-            moneysavings_array[4].value,
-            moneysavings_array[5].value,
-            moneysavings_array[6].value,
-            moneysavings_array[7].value,
-            moneysavings_array[8].value,
-            moneysavings_array[9].value,
-            moneysavings_array[10].value]
+            moneysavings_array[0].value.toFixed(2),
+            moneysavings_array[1].value.toFixed(2),
+            moneysavings_array[2].value.toFixed(2),
+            moneysavings_array[3].value.toFixed(2),
+            moneysavings_array[4].value.toFixed(2),
+            moneysavings_array[5].value.toFixed(2),
+            moneysavings_array[6].value.toFixed(2),
+            moneysavings_array[7].value.toFixed(2),
+            moneysavings_array[8].value.toFixed(2),
+            moneysavings_array[9].value.toFixed(2),
+            moneysavings_array[10].value.toFixed(2)]
         }
       ]
     };
@@ -119,20 +119,21 @@ function populateEnergyGraph(){
       datasets: [
         {
           label: "Energy Saved",
+          //colors chosen from google best data visualization colors
           backgroundColor: ["#3366CC","#DC3912","#FF9900","#109618","#990099","#3B3EAC","#0099C6",
             "#DD4477","#66AA00","#B82E2E","#316395"],
           data: [
-            energysavings_array[0].value,
-            energysavings_array[1].value,
-            energysavings_array[2].value,
-            energysavings_array[3].value,
-            energysavings_array[4].value,
-            energysavings_array[5].value,
-            energysavings_array[6].value,
-            energysavings_array[7].value,
-            energysavings_array[8].value,
-            energysavings_array[9].value,
-            energysavings_array[10].value]
+            energysavings_array[0].value.toFixed(2),
+            energysavings_array[1].value.toFixed(2),
+            energysavings_array[2].value.toFixed(2),
+            energysavings_array[3].value.toFixed(2),
+            energysavings_array[4].value.toFixed(2),
+            energysavings_array[5].value.toFixed(2),
+            energysavings_array[6].value.toFixed(2),
+            energysavings_array[7].value.toFixed(2),
+            energysavings_array[8].value.toFixed(2),
+            energysavings_array[9].value.toFixed(2),
+            energysavings_array[10].value.toFixed(2)]
         }
       ]
     };
