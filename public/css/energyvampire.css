@@ -13,6 +13,7 @@ body{
   width: 100%;
   height: 100%;
   padding: 0;
+
 }
 
 h1{margin:0;}
@@ -27,9 +28,20 @@ h1{margin:0;}
   box-shadow: inset 0 0 0 5000px rgba(0,0,0,0.3);
 }
 #results-container{
-  height:100%;
   display: none;
   font-size: 30px;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  text-align: center;
+  padding-bottom: 10vh;
+}
+#graph-container{
+  text-align: center;
+  width:80%;
+}
+.graph-titles{
+  padding-bottom: 1vh;
 }
 #title2-container{
   height:100%;
@@ -44,8 +56,8 @@ h1{margin:0;}
 #steps-container{
   display: flex;
   flex-flow: column;
-  justify-content: flex-start;
-  align-items: flex-start;
+  justify-content: center;
+  align-items: center;
   width: 90%;
   margin-top: 5em;
 }
@@ -94,7 +106,7 @@ label{
   opacity:0;
   transition: 0.7s ease-in-out;
 }
-#title{
+#results-title{
   text-align: center;
   color:white;
   font-size: 70px;
@@ -123,7 +135,7 @@ label{
 #test{
   height: 100%;
 }
-#myChart{
+#myChart,#myChart2{
   /* https://mdbootstrap.com/javascript/charts/ for help on setting size etc. */
   border: 1px solid white;
     box-shadow: inset 0 0 0 5000px rgba(0,0,0,0.3);

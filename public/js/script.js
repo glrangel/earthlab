@@ -41,12 +41,16 @@ var energy_const_array = [TV_SAVEDENER,TABLET_SAVEDENER,CONSOLE_SAVEDENER,LAMP_S
 TOASTER_SAVEDENER,MICROWAVE_SAVEDENER,COFFEE_SAVEDENER,
 LAPTOP_SAVEDENER,CELLPHONE_SAVEDENER,COMPUTER_SAVEDENER, PRINTER_SAVEDENER];
 
-var value_array = [];
+var value_array = []; //number of items that the user has
 var energysavings_array = [];
 var moneysavings_array = [];
 var item_array =["TV","Tablet","Video Game Console","Lamp","Toaster",
 	"Microwave Oven","Coffee Maker","Laptop","Cellpone Charger","Computer (Desktop)","Printer"];
 
+function itemObj(name,value){
+	this.name = name;
+	this.value = value;
+}
 
 // Animation functions
 function loginLoad(){
@@ -111,12 +115,17 @@ function initializeArray(){
 
 //scroll to results page
 function resultsPage(){
-	$('#results-container').css('display', 'inherit');
+	$('#submit').css('display','none'); //hide button
+	$('#results-container').css('display', 'flex');
 	$('body').animate({
         scrollTop: $("#results-container").offset().top
     }, 1000);
-    // printItems();
     calculateItems();
+    //hide submit button
+}
+function calculateItems(){
+	moneyAndEnergySaved();	
+	populateGraphs();
 }
 
 //debug function
@@ -128,30 +137,67 @@ function resultsPage(){
 // }
 
 //Calculating functions
+
 function moneyAndEnergySaved(){
 	for(var i = 0; i<value_array.length; i++){
-		// if(i == 1) //skip tablet because values are not that accurate
-		// 	continue;
-		// else{
-			moneysavings_array[i] = value_array[i] * money_const_array[i];
-			energysavings_array[i] = value_array[i] * energy_const_array[i];
-		// }
+		moneysavings_array[i] = new itemObj(item_array[i], (value_array[i] * money_const_array[i]));
+		energysavings_array[i] = new itemObj(item_array[i], (value_array[i] * energy_const_array[i]));
+	}
+	moneysavings_array.sort(compare);
+	energysavings_array.sort(compare);
+	calcTotalMoneyAndEnergySaved();
+}
+function calcTotalMoneyAndEnergySaved(){
+	var totalMoney = 0,totalEnergy = 0;
+	for(var i = 0; i< NUM_OF_ITEMS;i++){
+		console.log(moneysavings_array[i].value);
+		console.log(energysavings_array[i].value);
+		totalMoney += (moneysavings_array[i].value);
+		totalEnergy += (energysavings_array[i].value);
+	}
+	//assign html elements, bolded and changed color to standout
+	$('#money-saved').html("Money Saved Per Year: <br><b style='color:rgba(50,250,100,1);'>$" + totalMoney.toFixed(2) +"</b>");
+	$('#energy-saved').html("Energy Saved Per Year: <br><b style='color:rgba(50,250,100,1);'>" + totalEnergy.toFixed(2) + " KWh</b>");
+
+	console.log(parseFloat(totalMoney));
+	console.log(parseFloat(totalEnergy));
+}
+
+function displayValues(){
+	for(var i = 0; i<value_array.length; i++){
+		console.log(item_array[i] + ": " + value_array[i] + " Money saved: " 
+			+ moneysavings_array[i]+ " Energy saved: " + energysavings_array[i]);
 	}
 }
+
 function populateGraphs(){
 	//print all items
-	for(var i = 0; i<value_array.length; i++){
-		$('#results-container p:nth-child(' + (i+2) + ')')
-			.text(item_array[i] + ": " + value_array[i] + " Money saved: " + moneysavings_array[i]+ " Energy saved: " + energysavings_array[i]);
-	}
+	// displayValues();
 	populateMoneyGraph(); //function is in graphs.js
 	populateEnergyGraph(); //function is in graphs.js
 	$('#myChart').css('display','block');
+	$('#myChart2').css('display','block');
 
 }
 
-function calculateItems(){
-	moneyAndEnergySaved();	
-	populateGraphs();
+function compare(a,b) {
+  if (a.value > b.value)
+    return -1;
+  if (a.value < b.value)
+    return 1;
+  return 0;
 }
+
+function refresh(){
+	//destroys old charts to ensure the glitching overlay bug does not occur
+	myDoughnutChart1.destroy(); 
+	myDoughnutChart2.destroy();
+	$('body').animate({
+        scrollTop: $("#title-container").offset().top
+    }, 1000);
+    $('#results-container').css('display', 'none'); //hide container
+	$('#submit').css('display','inline'); //hide button
+	//show submit butotn
+}
+
 
