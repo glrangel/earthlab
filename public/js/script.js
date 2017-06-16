@@ -55,6 +55,7 @@ function itemObj(name,value){
 // Animation functions
 function loginLoad(){
 	document.getElementById('title-container').style.opacity = "1";
+	document.getElementById('enter-button').style.opacity = "1";
 	console.log("yay!");
 }
 function assignmentLoad(){
@@ -153,18 +154,30 @@ function calcTotalMoneyAndEnergySaved(){
 		totalMoney += (moneysavings_array[i].value);
 		totalEnergy += (energysavings_array[i].value);
 	}
-	numOfTrees = Math.round(totalEnergy * 0.018);//totalEnergy / 1;
+
+	//https://www.epa.gov/sites/production/files/2015-12/documents/emission-factors_nov_2015.pdf
+	//average in california 650.31 lbs CO2 / MWH average of all sources of energy (fossil fuels, solar, etc.)
+	//650.31 lbs CO2 / MWH  1 MWH / 1000 kWh = 0.65031 lbs CO2 / kWh
+	
+	//https://www.fueleconomy.gov/feg/contentIncludes/co2_inc.htm
+	//1 gallon of gas burns to 20 pounds of CO2
+
+	//https://www.epa.gov/fueleconomy/trends-report
+	//average MPG in usa in 2015 is 24.8 mpg
+ 
+	numOfTrees = Math.round((totalEnergy * 0.65031) / 20);//totalEnergy / 1;
+	var mpg = 24.8;
 	//assign html elements, bolded and changed color to standout
 	$('#money-saved').html("Money Saved Per Year: <br><b style='color:rgba(50,250,100,1);'>$" + totalMoney.toFixed(2) +"</b>");
 	$('#energy-saved').html("Energy Saved Per Year: <br><b style='color:rgba(50,250,100,1);'>" + totalEnergy.toFixed(2) + " kWh</b>");
 	//display number of trees saved based on totalEnergy value
-	$('#tree-paragraph').html("kWh means kilowatt hours.  It's basically the amount of energy you use per hour. " + 
-		"If you unplug your appliances when you're not using them you could save: <br><b style='color:rgba(50,250,100,1);'>" + totalEnergy.toFixed(2) + " kWh</b> <br>which is about the" + 
-		" same energy required to grow <br><b style='color:rgba(50,250,100,1);'>" + numOfTrees + " trees</b>!");
+	$('#tree-paragraph').html("That is about the same amount energy required to burn " + " <br><b style='color:rgba(50,250,100,1);'>" 
+		+ numOfTrees + " gallons of gas</b>!<br> That's like driving <br><b style='color:rgba(50,250,100,1);'>" 
+		+ numOfTrees * mpg + "</b> miles!");
 
 	//show correct number of trees saved
 	for(var i = 0; i < numOfTrees  ; i++){
-		$('#tree-paragraph').after('<img class="tree-images" src="images/happy_tree.png">');
+		// $('#tree-paragraph').after('<img class="tree-images" src="images/happy_tree.png">');
 	}
 }
 

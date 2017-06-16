@@ -31,12 +31,11 @@
 <body onload="vampireLoad()">
 	<div id="title2-container">
 		<h1 id="title">Energy Vampire</h1>
-		<h2 id="subtitle">Save energy by unplugging your unused household appliances and electronics! You can help preserve EarthLabs' natural beauty!</h2>
 		<div id="steps-container">
 			<h1>Step 1: When you're home, count the number of each of the appliances listed below that you have plugged in.</h1><br>
 <!-- 			<h2>TV, Tablet, Video Game Console, Lamp, Toaster, Microwave Oven, Coffee Maker, Laptop, Cellpone Charger, Computer (Desktop), Printer</h2> -->
 			<h1>Step 2: Input your numbers below.</h1><br>
-			<h1>Step 3: See how you could save the environment by simply unplugging unused aplliances!</h1>
+			<h1>Step 3: See how you could save the environment by simply unplugging unused appliances!</h1>
 		</div>
 	</div>
 	<div id="title-container">
@@ -217,21 +216,23 @@
 	</div>
 	<div id="results-container">
 		<h1 id="results-title">Results</h1>
+		<p>This is how much you would save a year if you unplugged each of your unused appliances that you listed above!</p>
 		<div id="graph-container">
-			<h1 id="money-saved" class="graph-titles"></h1>
-			<p>This is how much money you would save a year if you unplugged each of your unused appliances that you listed above!</p>
-			<canvas height=200 width=400 id="myChart"></canvas>
-			<br>
-			<h1 id="energy-saved" class="graph-titles"></h1>
-			<p>This is how much energy you would save a year if you unplugged each of your unused appliances that you listed above!</p>
-			<h2> What do those weird letters kWh mean? Check out below for a real life example of how what you do can change the world around you!</h2>
-			<canvas height=200 width=400 id="myChart2"></canvas>
-			<p id="tree-paragraph"></p>
+			<div id="money-saved-wrapper">
+				<h1 id="money-saved" class="graph-titles"></h1>
+				<canvas  id="myChart"></canvas>
+			</div>
+			<div id="energy-saved-wrapper">
+				<h1 id="energy-saved" class="graph-titles"></h1>
+				<canvas  id="myChart2"></canvas>
+			</div>
 		</div>
-		<br>
-		<h1>Be sure to thank Joanna for making EarthLab the coolest place to learn! </h1><br>
-		<p> Click here to enter values again! </p>
-		<button id="submit" onclick="refresh()"> Save The Environment! </button>
+		<div>
+			<p id="tree-paragraph"></p>
+			<h1>Be sure to thank Ms. Proctor for making EarthLab the coolest place to learn! </h1><br>
+			<p> Click here to enter values again! </p>
+			<button id="submit" onclick="refresh()"> Save The Environment! </button>
+		</div>
 
 	</div>
 		
